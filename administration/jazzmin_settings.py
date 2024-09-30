@@ -1,13 +1,13 @@
 # Configuración de Jazzmin para personalizar el panel de administración de Django
 JAZZMIN_SETTINGS = {
     # Título de la ventana
-    "site_title": "System School",
+    "site_title": "System Administration",
 
     # Título en la pantalla de inicio de sesión
-    "site_header": "System School",
+    "site_header": "System Administration",
 
     # Marca del sitio en la esquina superior izquierda
-    "site_brand": "System School",
+    "site_brand": "System Administration",
 
     # Logo del sitio (asegúrate de que el logo esté en la carpeta de archivos estáticos)
     "site_logo": "img/logo_school-bg.png",
@@ -26,7 +26,7 @@ JAZZMIN_SETTINGS = {
     "site_icon": "img/logo_school-bg.png",
 
     # Texto de bienvenida en la pantalla de inicio de sesión
-    "welcome_sign": "Bienvenido System School",
+    "welcome_sign": "Bienvenido System Administration",
 
     # Copyright en el pie de página
     "copyright": "Jorge Romero C",
