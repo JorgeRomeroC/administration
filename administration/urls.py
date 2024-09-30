@@ -21,8 +21,11 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.shortcuts import redirect
 
+from applications.user.views import CustomLoginView
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('applications.user.urls')),  # Mantén la ruta de tu API
-    path('', lambda request: redirect('login')),  # Redirige la URL raíz al login
+    path('accounts/login/', CustomLoginView.as_view(), name='login'),# Usa la vista de login personalizada
+    path('', CustomLoginView.as_view()),  # Redirige la raíz al login si no está autenticado
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
