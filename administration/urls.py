@@ -19,11 +19,11 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.shortcuts import redirect
 from django.urls import path, include
-from django.contrib.auth.views import LoginView
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('applications.user.urls')),
-    path('accounts/login/', LoginView.as_view(), name='login'),  # Vista de login
+    path('accounts/login/', auth_views.LoginView.as_view(), name='login'),  # Redirigir al login de Django
     path('', lambda request: redirect('login')),  # Redirigir la raíz al login
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
