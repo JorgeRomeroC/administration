@@ -173,6 +173,9 @@ LOGIN_URL = '/accounts/login/'  # O la URL que prefieras
 
 LOGIN_REDIRECT_URL = '/'
 
+# settings.py
+LOGOUT_REDIRECT_URL = '/accounts/login/'  # O el nombre de la URL definida en urls.py
+
 CKEDITOR_5_CUSTOM_CSS = {
     'default': 'css/custom.css',
 }
