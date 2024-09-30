@@ -24,6 +24,5 @@ from django.shortcuts import redirect
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('applications.user.urls')),  # Mantén la ruta de tu API
-    path('accounts/login/', auth_views.LoginView.as_view(), name='login'),  # Vista de login de Django
     path('', lambda request: redirect('login')),  # Redirige la URL raíz al login
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
