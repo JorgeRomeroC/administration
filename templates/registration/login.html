@@ -24,12 +24,8 @@
                     {% csrf_token %}
 
                     <div class="input-group mb-3">
-                        {{ form.email }}
+                        {{ form.as_p}}
                     </div>
-                    <div class="input-group mb-3">
-                        {{ form.password }}
-                    </div>
-
                     <div class="row">
                         <div class="col-8">
                             <div class="icheck-primary">
