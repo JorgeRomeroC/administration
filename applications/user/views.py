@@ -25,7 +25,7 @@ class CustomLoginView(LoginView):
 
     # Si deseas usar una plantilla personalizada, la especificas aquí:
     def get_template_names(self):
-        return ['registration/login.html']  # Puedes cambiarla si tienes una plantilla personalizada
+        return ['admin/']  # Puedes cambiarla si tienes una plantilla personalizada
 
 
 

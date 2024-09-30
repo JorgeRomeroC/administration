@@ -28,6 +28,6 @@ urlpatterns = [
     path('api/', include('applications.user.urls')),  # Mantén la ruta de tu API
     path('accounts/login/', CustomLoginView.as_view(), name='login'),# Usa la vista de login personalizada
     # al cerrar sesion redirige al login
-    path('accounts/logout/', lambda request: redirect('login'), name='logout'),
+    #path('accounts/logout/', lambda request: redirect('login'), name='logout'),
     path('', CustomLoginView.as_view()),  # Redirige la raíz al login si no está autenticado
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
