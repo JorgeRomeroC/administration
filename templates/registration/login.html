@@ -22,25 +22,7 @@
 
                 <form method="post">
                     {% csrf_token %}
-                    {{ form.as_p }}
-
-                    <div class="input-group mb-3">
-                        <input type="text" name="username" class="form-control" placeholder="Username" required>
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-user"></span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="input-group mb-3">
-                        <input type="password" name="password" class="form-control" placeholder="Password" required>
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-lock"></span>
-                            </div>
-                        </div>
-                    </div>
+                    {{ form.as_p }} <!-- Deja que Django maneje el formulario automáticamente -->
 
                     <div class="row">
                         <div class="col-8">
