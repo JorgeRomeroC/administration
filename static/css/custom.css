@@ -1,0 +1,46 @@
+/* static/css/custom_styles.css */
+.login-logo img {
+    max-width: 100px; /* Ajusta el tamaño del logo */
+    border-radius: 8px; /* Bordes redondeados */
+    margin: 0 auto; /* Centra la imagen */
+    display: block; /* Muestra como bloque */
+}
+
+/* Cambia el color de los botones */
+.btn-primary {
+background-color: #8e241d; /* Cambia el color de fondo */
+border-color: #8e241d; /* Cambia el color del borde */
+color: white; /* Cambia el color del texto */
+}
+
+/* Estilo para botones en estado hover */
+.btn-primary:hover {
+background-color: #8e241d;
+border-color: #8e241d;
+}
+
+/* Cambia el estilo de los títulos */
+.card-header {
+background-color: #f8f9fa;
+font-weight: bold;
+color: #333;
+}
+.btn-group .btn-info{
+    background-color: #8e241d;
+    border-color: #8e241d;
+    color: white;
+}
+.btn-group .btn-success{
+    background-color: #000000;
+    border-color: #000000;
+    color: white;
+}
+.nav-item a.nav-link.active,
+.nav-pills .nav-item a.nav-link.active{
+    background-color: #8e241d !important;
+    color: white !important;
+}
+.table thead th a{
+    background-color: #f8f9fa;
+    color: #333 !important;
+}
