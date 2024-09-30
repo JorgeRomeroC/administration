@@ -13,11 +13,11 @@ class CustomUserChangeForm(UserChangeForm):
         # Añadir clases de Bootstrap a los campos
         self.fields['email'].widget.attrs.update({
             'class': 'form-control',  # Clases de Bootstrap para estilizar
-            'placeholder': 'Email',
+            'placeholder': 'Ingrese su Email',
         })
         self.fields['password'].widget.attrs.update({
             'class': 'form-control',
-            'placeholder': 'Contraseña',
+            'placeholder': 'Ingrese su Contraseña',
         })
 
     def clean_username(self):
