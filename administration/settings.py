@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 import os
 from pathlib import Path
 
-from django.conf.global_settings import STATICFILES_STORAGE
+from django.conf.global_settings import STATICFILES_STORAGE, CSRF_TRUSTED_ORIGINS
 
 from administration.jazzmin_settings import JAZZMIN_SETTINGS
 
@@ -165,6 +165,12 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+CSRF_TRUSTED_ORIGINS = ['administration-production-7c6d.up.railway.app']
+
+LOGIN_URL = '/accounts/login/'  # O la URL que prefieras
+
+LOGIN_REDIRECT_URL = '/'
 
 CKEDITOR_5_CUSTOM_CSS = {
     'default': 'css/custom.css',
