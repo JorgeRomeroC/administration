@@ -11,10 +11,14 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 import os
 from pathlib import Path
+import dj_database_url
+from dotenv import load_dotenv
 
 from django.conf.global_settings import STATICFILES_STORAGE, CSRF_TRUSTED_ORIGINS
 
 from administration.jazzmin_settings import JAZZMIN_SETTINGS
+
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -94,10 +98,7 @@ WSGI_APPLICATION = 'administration.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.config( default=os.getenv('DATABASE_URL'))
 }
 # DATABASES = {
 #     'default': {
@@ -166,7 +167,7 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-CSRF_TRUSTED_ORIGINS = ['administration-production-7c6d.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://administration-production-7c6d.up.railway.app']
 
 LOGIN_URL = '/accounts/login/'  # O la URL que prefieras
 
