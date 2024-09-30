@@ -24,7 +24,7 @@
                     {% csrf_token %}
 
                     <div class="input-group mb-3">
-                        {{ form.email }}
+                        <input type="text" name="username" class="form-control" placeholder="Email o Username" required>
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-user"></span>
@@ -32,7 +32,7 @@
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        {{ form.password }}
+                        <input type="password" name="password" class="form-control" placeholder="Contraseña" required>
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-lock"></span>
